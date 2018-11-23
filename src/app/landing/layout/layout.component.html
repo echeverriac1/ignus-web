@@ -1,0 +1,157 @@
+<div class="body">
+      <app-navigation></app-navigation>
+      <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+         <ol class="carousel-indicators">
+            <li data-target="#inSlider" data-slide-to="0" class="active"></li>
+            <li data-target="#inSlider" data-slide-to="1"></li>
+         </ol>
+         <div class="carousel-inner" role="listbox">
+            <div class="item active">
+               <div class="container">
+                  <div class="carousel-caption">
+                     <h1>
+                        Encontramos<br/>
+                        para usted el inmueble<br/>                    
+                        Que desea<br/>                      
+                     </h1>
+                     <p>Visite nuestro catálago de inmuebles</p>
+                     <p>
+                        <a class="btn btn-lg btn-primary" (click)="openModal(template)" role="button">Catálogo</a>
+                     </p>
+                  </div>
+                  <div class="carousel-image wow zoomIn">
+                     <img src="../assets/img/logoblanco.png" alt="laptop"/>
+                  </div>
+               </div>
+               <!-- Set background for slide in css -->
+               <div class="header-back one"></div>
+            </div>
+            <div class="item">
+               <div class="container">
+                  <div class="carousel-caption blank">
+                     <h1>Nuestro fuerte <br> es el servicio <br/> </h1>
+                     <p>Por ello creamos nuestra app para adaptarnos más a sus necesidades.</p>
+                     <p><a class="btn btn-lg btn-primary" href="#" role="button">Android</a>&nbsp;  &nbsp; 
+                     <a class="btn btn-lg btn-primary" href="#" role="button">Iphone</a></p>
+                  </div>
+               </div>
+               <!-- Set background for slide in css -->
+               <div class="header-back two"></div>
+            </div>
+         </div>
+         <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
+         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+         <span class="sr-only">Previous</span>
+         </a>
+         <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
+         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+         <span class="sr-only">Next</span>
+         </a>
+      </div>
+      <section id="#" class="container services">
+         <div class="row">
+            <div class="col-sm-4">
+               <ul class="list-inline social-icon rrss">
+                  <li>
+                     <h4><span style="color:#c2c2c2">Redes sociales:</span></h4>
+                  </li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                  </li>
+               </ul>
+            </div>
+            <div class="col-sm-4 col-sm-offset-4" style=" color:#c2c2c2">
+              <br/> 
+              <div class="">
+                <p> <span>Noticias:</span>  aqui va un texto prueba</p>
+              </div>
+              
+                 
+               
+            </div>
+         </div>
+      </section>
+      <section id="services" class="gray-section team">
+         <div class="container">
+            <div class="row m-b-lg">
+               <div class="col-lg-12 text-center">
+                  <div class="navy-line"></div>
+                  <h1>Nuestros servicios</h1>
+                  <p style="color:#1ab394">Suscríbase y viva la experiencia con Ignus. Le ofrecemos las mejores ofertas y planes en materia inmobiliaria.</p>
+               </div>
+               <br/><br/><br/><br/> <br/><br/><br/><br/> <br/>
+               <div class="row">
+                  <div class="col-md-3">
+                     <div id="compra" class="card mb-4 box-shadow">
+                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../assets/img/servicio1.jpg" data-holder-rendered="true" img="reponsive rounded" style="height: 225px; width: 100%; display: block;">
+                        <div class="card-body">
+                           <h4 class="card-text "><a  style="color:#1ab394">Compra</a></h4>
+                           <p style="color:#414444">¿No encuentra lo que busca?
+                           Lo invitamos a visitar nuestro cátalogo que cuenta con la más amplia
+                           variedad de inmuebles que se adaptarán a sus necesidades, aproveche nuestras ofertas y promociones, le ayudaremos a encontrar el hogar que desea.
+                           </p>
+                           <div class="d-flex justify-content-between ">
+                              <div>
+                                 <button (click)="openModal(template)" type="button"  class="btn btn-primary full-width">Más información</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div id="compra" class="card mb-4 box-shadow">
+                         <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../assets/img/servicio2.jpg" data-holder-rendered="true" img="reponsive" style="height: 225px; width: 100%; display: block;">
+                         <div class="card-body">
+                            <h4 class="card-text "><a  style="color:#1ab394">Alquiler</a></h4>
+                            <p style="color:#414444">El alquiler es un negocio y como tal implica  un seguimiento, atención y riesgo.
+                               permitanos gestionar todo este proceso, defenderemos sus intereses como propietario y garantizaremos su seguridad en todo momento. 
+                            </p>
+                            <div class="d-flex justify-content-between ">
+                               <div>
+                                  <button (click)="openModal(template)" type="button"  class="btn btn-primary full-width">Más información</button>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                  <div class="col-md-3">
+                     <div id="venta"  class="card mb-4 box-shadow">
+                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../assets/img/servicio3.jpg" data-holder-rendered="true" img="reponsive thumbnail" style="height: 225px; width: 100%; display: block;">
+                        <div class="card-body">
+                           <h4 class="card-text"><a style="color:#1ab394">Venta </a></h4>
+                           <p style="color:#414444">¿Desea vender o alquilar un inmueble sin riesgos? Su seguridad es nuestra prioridad, por ello contamos con los mejores asesores para gestionar las transacciones que desea. Contacte con nuestro equipo y le atenderemos de inmediato.</p>
+                           <div class="d-flex justify-content-between align-items-center">
+                              <div>
+                                 <button type="button" (click)="openModal(template)" class="btn btn-primary full-width">Más información</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <div class="col-md-3">
+                      <div id="venta"  class="card mb-4 box-shadow">
+                         <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="../assets/img/servicio4.jpg" data-holder-rendered="true" img="reponsive thumbnail" style="height: 225px; width: 100%; display: block;">
+                         <div class="card-body">
+                            <h4 class="card-text"><a style="color:#1ab394">Arrendamiento</a></h4>
+                            <p style="color:#414444">Nuestro personal le brindará la mejor asesoría para cumplir con todo el proceso de arriendo de su inmueble,
+                            Su seguridad es nuestra prioridad, por ello le garantizamos la integridad de todas las transacciones. contactenos</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                               <div>
+                                  <button type="button" (click)="openModal(template)" class="btn btn-primary full-width">Más información</button>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+               </div>
+            </div>
+         </div>
+         <br><br><br><br>
+      </section>
+      <app-footer></app-footer>
+    </div>
+    

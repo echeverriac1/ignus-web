@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import {FormsModule} from '@angular/forms';
+import { AgencyService } from './services/agency.service';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -20,9 +22,12 @@ import { FooterComponent } from './shared/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    AgencyService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
