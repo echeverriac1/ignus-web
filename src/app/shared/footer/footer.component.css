@@ -1,4 +1,4 @@
-a{
+   a{
     color:#c2c2c2;
    }
    .icon-footer {
@@ -13,7 +13,7 @@ a{
      border-radius: 50px;
    }
    .title h4{
-       color:#41ccc7;
+       color:#18a689;
    }
    .info{
     margin-left:50px;
@@ -23,7 +23,9 @@ a{
        margin-bottom:5px;
        background: #727272;
    }
-   
+   .select{
+     color:#c2c2c2;
+   }  
    #btn1 {
      width: 100%;
      display: flex;
