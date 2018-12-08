@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AgencyService } from '../../services/agency.service';
+import { GlobalService } from '../../providers/global.service';
 
 @Component({
   selector: 'app-services',
@@ -9,28 +9,23 @@ import { AgencyService } from '../../services/agency.service';
 })
 
 export class ServicesComponent implements OnInit{
-  typeService: any;
+  typeServices: any;
 
-  constructor(public _typeServiceService: AgencyService) {
-    this.typeService=[];
-
-
-  } 
-  
-  ngOnInit() {
-    console.log('showing type of services')
-    this._typeServiceService.getServices()
-    .then((result) => {
-      this.typeService=result['data'];
-      console.log(this.typeService);
-    }, (err) => {
-      console.log(err);
-      //this.loader.dismiss();
-    });
-    console.log('police two');
- 
+  constructor(public _globalService: GlobalService) {
+    this.typeServices=[];
+    
   }
 
+  ngOnInit() {
+    console.log('PUT SERVICES BRO');
+    this._globalService.getModel('/api/typeService')
+     .then((result) => {
+       console.log(result['data']);
+       this.typeServices=result['data'];
+     },(err) => {
+       console.log(err);
+     });
 
+  }
 
 }

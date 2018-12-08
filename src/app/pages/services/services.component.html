@@ -1,11 +1,11 @@
   <div class="container">
         <div class="row">
-           <div class="col-md-3" *ngFor="let service of typeService">
-              <div id="{{ service.name }}" class="card mb-4 box-shadow">
-                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Image:{{ service.name}} [100%x225]" src="{{ service.urlImage }}" data-holder-rendered="true" img="reponsive rounded" style="height: 225px; width: 100%; display: block;">
+           <div class="col-md-3" *ngFor="let typeService of typeServices">
+              <div id="{{ typeService.name }}" class="card mb-4 box-shadow">
+                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Image:{{ typeService.name}} [100%x225]" src="{{ typeService.urlImage }}" data-holder-rendered="true" img="reponsive rounded" style="height: 225px; width: 100%; display: block;">
                  <div class="card-body">
-                    <h4 class="card-text "><a  style="color:#1ab394">{{ service.name }}</a></h4>
-                    <p style="color:#414444">{{ service.description }}</p>
+                    <h4 class="card-text "><a  style="color:#1ab394">{{ typeService.name }}</a></h4>
+                    <p style="color:#414444">{{ typeService.description }}</p>
                     <div class="d-flex justify-content-between ">
                        <div>
                           <button (click)="openModal(template)" type="button"  class="btn btn-primary full-width">Más información</button>

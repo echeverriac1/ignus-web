@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AgencyService } from '../../services/agency.service';
-
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
@@ -9,24 +7,13 @@ import { AgencyService } from '../../services/agency.service';
 })
 
 export class LayoutComponent implements OnInit{
-  agency: any;
+   
 
-  constructor(public _agencyService: AgencyService) {
-    this.agency=[];
-
+  constructor() {
 
   } 
   
   ngOnInit() {
-    this._agencyService.getAgency()
-    .then((result) => {
-      this.agency=result['data'];
-    }, (err) => {
-      console.log(err);
-      //this.loader.dismiss();
-    });
-    console.log('police two');
- 
   }
 
 
