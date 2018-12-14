@@ -1,0 +1,34 @@
+<div class="container contact">
+     
+  <div class="row m-b-lg">
+      <div class="col-lg-12 text-center">
+          <div class="navy-line"></div>
+          <h1>Contacto rápido</h1>
+          <p>Tu opinión para nosotros es muy importante, gracias por preferirnos.</p><br/>
+          <p><span class="navy">Direción: </span>{{ agency.ubication }}</p>
+          <p><span class="navy">Teléfono: </span>{{ agency.phoneNumber }} / {{ agency.phoneNumber2 }}</p>
+          <p><span class="navy">Rif: </span>{{ agency.rif }}</p>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Nombre y Apellido" required="">
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Correo" required="">
+      </div>
+      <div class="form-group">
+        <select class="form-control" id="sel1">
+          <option>Sugerencia</option>
+          <option>Queja</option>
+          <option>Garantia</option>
+        </select>
+      </div>
+    </div> 
+    <div class="col-md-6">
+      <textarea class="form-control form-contact" id="exampleFormControlTextarea1" rows="6" placeholder="Escriba su mensaje"></textarea>
+      <br/><button type="submit" class="btn btn-primary float-right block full-width m-b">Ingresar</button>
+    </div>
+  </div>
+</div>

@@ -2,14 +2,12 @@ import { Component, OnInit } from '@angular/core';
 
 import { GlobalService } from '../../providers/global.service';
 
-
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  selector: 'app-networks',
+  templateUrl: './networks.component.html',
+  styleUrls: ['./networks.component.css']
 })
-
-export class FooterComponent implements OnInit {
+export class NetworksComponent implements OnInit {
   agency: any;
 
   constructor(public _globalService: GlobalService) {
@@ -27,7 +25,5 @@ export class FooterComponent implements OnInit {
      });
 
   }
-
-
 
 }

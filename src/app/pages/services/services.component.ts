@@ -20,7 +20,7 @@ export class ServicesComponent implements OnInit{
     console.log('PUT SERVICES BRO');
     this._globalService.getModel('/api/typeService')
      .then((result) => {
-       console.log(result['data']);
+       //console.log(result['data']);
        this.typeServices=result['data'];
      },(err) => {
        console.log(err);

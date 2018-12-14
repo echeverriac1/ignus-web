@@ -4,7 +4,8 @@
        <div class="row m-b-lg">
           <div class="col-lg-3 title">
              <div class="row">
-                <img class="responsive" style="height:90px; width:200px"src="../assets/img/logogris.png" alt="Logo"/>
+                <img class="responsive" style="height:110px; width:150px"src="{{ agency.logos[1].url }}" alt="Logo"/>
+                <p class="rif">{{ agency.rif }}</p>
              </div>
           </div>
           <div class="col-lg-3 title">
@@ -31,19 +32,12 @@
                    <i class="icon-footer fa fa-phone"></i>
                 </div>
                 <div>
-                   <h6 class="info">+58 0251-1234567 / +58 0251-7654321</h6>
+                   <h6 class="info">{{ agency.phoneNumber }} / {{ agency.phoneNumber2 }}</h6>
                 </div>
              </div>
              <br/>
              <div class="list-inline social-icon">
-                <ul class="list-inline">
-                   <li><a class="icon-footer" href="#"><i class="fa fa-twitter"></i></a>
-                   </li>
-                   <li><a class="icon-footer" href="#"><i class="fa fa-facebook"></i></a>
-                   </li>
-                   <li><a class="icon-footer" href="#"><i class="fa fa-linkedin"></i></a>
-                   </li>
-                </ul>
+                <app-networks></app-networks>
              </div>
           </div>
           <div class="col-lg-3 title">
@@ -56,7 +50,7 @@
                     <select class="form-control form-contact select" id="sel1">
                       <option>Sugerencia</option>
                       <option>Queja</option>
-                      <option>Garantia</option>
+                      <option>Garantía</option>
                     </select>
                   </div>
                    <textarea class="form-control form-contact" id="exampleFormControlTextarea1" rows="3" placeholder="Escriba su mensaje"></textarea>

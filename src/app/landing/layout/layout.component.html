@@ -1,5 +1,4 @@
 <div class="body">
-      <app-navigation></app-navigation>
       <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
          <ol class="carousel-indicators">
             <li data-target="#inSlider" data-slide-to="0" class="active"></li>
@@ -20,7 +19,7 @@
                      </p>
                   </div>
                   <div class="carousel-image wow zoomIn">
-                     <img src="../assets/img/logoblanco.png" alt="laptop"/>
+                     <img src="{{ agency.logos[0].url }}" style="height:300px; width:600px" alt="laptop"/>
                   </div>
                </div>
                <!-- Set background for slide in css -->
@@ -51,26 +50,13 @@
       <section id="#" class="container services">
          <div class="row">
             <div class="col-sm-4">
-               <ul class="list-inline social-icon rrss">
-                  <li>
-                     <h4><span style="color:#c2c2c2">Redes sociales:</span></h4>
-                  </li>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li><a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                  </li>
-               </ul>
+               <app-networks></app-networks>
             </div>
             <div class="col-sm-4 col-sm-offset-4" style=" color:#c2c2c2">
               <br/> 
               <div class="">
                 <p> <span>Noticias:</span>  aqui va un texto prueba</p>
-              </div>
-              
-                 
-               
+              </div>       
             </div>
          </div>
       </section>

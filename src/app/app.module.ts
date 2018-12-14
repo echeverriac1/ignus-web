@@ -10,6 +10,9 @@ import { LayoutComponent } from './landing/layout/layout.component';
 import { NavigationComponent } from './shared/navigation/navigation.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ServicesComponent } from './pages/services/services.component';
+import { NetworksComponent } from './shared/networks/networks.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { ServicesComponent } from './pages/services/services.component';
     LayoutComponent,
     NavigationComponent,
     FooterComponent,
-    ServicesComponent
+    ServicesComponent,
+    NetworksComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

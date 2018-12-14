@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { GlobalService } from '../../providers/global.service';
+
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
@@ -7,13 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class LayoutComponent implements OnInit{
-   
+  agency: any;
 
-  constructor() {
+  constructor(public _globalService: GlobalService) {
+    this.agency=[];
+    
+  }
 
-  } 
-  
   ngOnInit() {
+    this._globalService.getModel('/api/agency')
+     .then((result) => {
+      //console.log(result['data']);
+       this.agency=result['data'];
+     },(err) => {
+       console.log(err);
+     });
+
   }
 
 

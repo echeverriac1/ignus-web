@@ -4,12 +4,12 @@ import { GlobalService } from '../../providers/global.service';
 
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.css']
 })
 
-export class FooterComponent implements OnInit {
+export class AboutComponent implements OnInit {
   agency: any;
 
   constructor(public _globalService: GlobalService) {
@@ -27,7 +27,5 @@ export class FooterComponent implements OnInit {
      });
 
   }
-
-
 
 }
