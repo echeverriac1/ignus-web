@@ -7,32 +7,30 @@
         </div>
         <h3>Suscribase a INMOEILEN C.A.</h3>
         <p>Y disfrute de nuestros servicios</p>
-        <form  (ngSubmit)="guardar()" #forma="ngForm" class="m-t" role="form" action="login.html">
+        
+
         <div class="form-group">
-           <input type="text" class="form-control" placeholder="Nombre" required=""
-           [(ngModel)]="register.name" name="name">
+          <input type="text" [(ngModel)]="cliente.identification" class="form-control" placeholder="Email"/>
         </div>
+
         <div class="form-group">
-           <input type="text" class="form-control" placeholder="Apellido" required=""
-           [(ngModel)]="register.lastname" name="lastname">
+          <input type="text" [(ngModel)]="cliente.firstName" class="form-control" placeholder="Nombre"/>
         </div>
+
         <div class="form-group">
-           <input type="email" class="form-control" placeholder="Correo" required=""
-           [(ngModel)]="register.email" name="email">
+          <input type="text" [(ngModel)]="cliente.lastName" class="form-control" placeholder="Apellido"/>
         </div>
+
         <div class="form-group">
-           <input type="date" class="form-control" required=""
-           [(ngModel)]="register.datebirth" name="datebirth">
+          <input type="date" [(ngModel)]="cliente.birthDate" class="form-control" placeholder="Fecha de nacimiento"/>
         </div>
+
         <div class="form-group">
-           <select [(ngModel)]="register.gender" name="gender" class="form-control" id="sel1">
-           <option value="0" selected>Sexo</option>
-           <option value="1">Hombre</option>
-           <option value="2">Mujer</option>
-           </select>
+          <input type="text" [(ngModel)]="cliente.gender" class="form-control" placeholder="Genero"/>
         </div>
+
         <div class="form-group">
-           <select [(ngModel)]="register.preferences" name="preferences" class="form-control" id="sel1">
+           <select name="preferences" class="form-control" id="sel1">
            <option value="0" selected>¿Que tipo de servicio le interesa?...</option>
            <option value="1">Comprar</option>
            <option value="2">Alquilar</option>
@@ -41,12 +39,12 @@
            </select>
         </div>
         <div class="form-group">
-           <div class="checkbox i-checks"><label> <input  [ngModel]="register.terms" name="terms" type="checkbox"><i></i>Acepto los terminos y condiciones </label></div>
+           <div class="checkbox i-checks"><label> <input name="terms" type="checkbox"><i></i>Acepto los términos y condiciones </label></div>
         </div>
-        <button [disabled]="!forma.valid" type="submit" class="btn btn-primary block full-width m-b">Suscribir</button>
+        <button [disabled]="!forma.valid" type="button" class="btn btn-primary block full-width m-b"  (click)="Registrar()" >Suscribir</button>
         <p class="text-muted text-center"><small>¿Ya tienes una cuenta?</small></p>
         <a class="btn btn-sm btn-white btn-block" routerLink="/login">Ingresar</a>
-        </form>
+
      </div>
   </div>
 </div>
