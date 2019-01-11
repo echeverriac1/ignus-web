@@ -11,9 +11,11 @@ import { GlobalService } from '../../providers/global.service';
 
 export class FooterComponent implements OnInit {
   agency: any;
+  logo:any;
 
   constructor(public _globalService: GlobalService) {
     this.agency=[];
+    this.logo={}
     
   }
 
@@ -22,6 +24,7 @@ export class FooterComponent implements OnInit {
      .then((result) => {
       //console.log(result['data']);
        this.agency=result['data'];
+       this.logo=this.agency['logo']['url'];
      },(err) => {
        console.log(err);
      });

@@ -9,9 +9,11 @@ import { GlobalService } from '../../providers/global.service';
 })
 export class NetworksComponent implements OnInit {
   agency: any;
+  socialNetworks: any;
 
   constructor(public _globalService: GlobalService) {
     this.agency=[];
+    this.socialNetworks=[];
     
   }
 
@@ -20,6 +22,7 @@ export class NetworksComponent implements OnInit {
      .then((result) => {
       //console.log(result['data']);
        this.agency=result['data'];
+       this.socialNetworks= this.agency.socialNetworks
      },(err) => {
        console.log(err);
      });
