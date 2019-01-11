@@ -19,7 +19,7 @@
                      </p>
                   </div>
                   <div class="carousel-image wow zoomIn">
-                     <img src="{{ agency.logos[0].url }}" style="height:300px; width:600px" alt="laptop"/>
+                     <img src="{{agency['logo']['url']}}" style="height:300px; width:600px" alt="{{agency['logo']['description']}}"/> 
                   </div>
                </div>
                <!-- Set background for slide in css -->
@@ -49,9 +49,9 @@
       </div>
       <section id="#" class="container services">
          <div class="row">
-            <div class="col-sm-4">
+            <!-- <div class="col-sm-4">
                <app-networks></app-networks>
-            </div>
+            </div> -->
             <div class="col-sm-4 col-sm-offset-4" style=" color:#c2c2c2">
               <br/> 
               <div class="">
@@ -70,6 +70,6 @@
             <app-services></app-services>
          </div>
       </section>
-      <app-footer></app-footer>
+     <app-footer></app-footer>
     </div>
     
