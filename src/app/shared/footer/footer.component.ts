@@ -12,10 +12,15 @@ import { GlobalService } from '../../providers/global.service';
 export class FooterComponent implements OnInit {
   agency: any;
   logo:any;
+  contact:any;
+  new:any;
 
   constructor(public _globalService: GlobalService) {
     this.agency=[];
-    this.logo={}
+    this.logo={};
+    this.contact = [];
+    this.new = [];
+
     
   }
 
@@ -29,6 +34,27 @@ export class FooterComponent implements OnInit {
        console.log(err);
      });
 
+  }
+
+  saveMessage() {
+    this.new = JSON.stringify({
+      name: this.contact.name,
+      email: this.contact.email,
+    });
+
+      console.log(this.new);
+       
+      this._globalService.addModel(this.new, "/api/contact").then(
+        result => {
+          console.log(result);
+          alert("Usted ha enviado el mensaje exitosamente!");
+        },
+        err => {
+          console.log(err);
+        }
+      );
+
+  
   }
 
 

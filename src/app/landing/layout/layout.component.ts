@@ -21,7 +21,7 @@ export class LayoutComponent implements OnInit{
   ngOnInit() {
     this._globalService.getModel('/api/agency')
      .then((result) => {
-      //console.log(result['data']);
+      console.log('ESTE ES LA AGENCIA');console.log(result['data']);
        this.agency=result['data'];
        this.logo= this.agency['logo']['url'];
      },(err) => {
