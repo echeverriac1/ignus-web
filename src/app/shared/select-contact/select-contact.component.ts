@@ -20,7 +20,6 @@ export class SelectContactComponent implements OnInit {
      },(err) => {
        console.log(err);
      });
-
   }
 
 }

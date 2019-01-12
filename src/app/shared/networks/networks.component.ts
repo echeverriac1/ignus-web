@@ -20,7 +20,6 @@ export class NetworksComponent implements OnInit {
   ngOnInit() {
     this._globalService.getModel('/api/agency')
      .then((result) => {
-      //console.log(result['data']);
        this.agency=result['data'];
        this.socialNetworks= this.agency.socialNetworks
      },(err) => {

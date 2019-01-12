@@ -1,8 +1,8 @@
    a{
     color:#c2c2c2;
    }
-   .form-group .ajaja{
-     margin-bottom: 1;
+   input:focus{
+    outline:1px dashed red;
    }
    .icon-footer {
      background: #a2a0a0;
@@ -18,7 +18,7 @@
    .form-contact{
     margin-bottom:5px;
     background: #727272;
-}
+   }
    .title h4{
        color:#18a689;
    }
