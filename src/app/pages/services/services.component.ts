@@ -10,22 +10,36 @@ import { GlobalService } from '../../providers/global.service';
 
 export class ServicesComponent implements OnInit{
   typeServices: any;
+  show: boolean;
 
   constructor(public _globalService: GlobalService) {
     this.typeServices=[];
     
   }
 
+  sliderShow(){
+    console.log(this.typeServices.length)
+    this.show = false;
+    if(this.typeServices.lenght<=4){
+      return this.show=false;
+    }else{
+      return this.show=true;
+    }
+  }
+
   ngOnInit() {
-    console.log('PUT SERVICES BRO');
+    this.sliderShow();
+    
     this._globalService.getModel('/api/typeService')
      .then((result) => {
-       //console.log(result['data']);
+      //  console.log(result['data']);
        this.typeServices=result['data'];
+       this.typeServices.length;
      },(err) => {
        console.log(err);
      });
 
   }
 
+  
 }

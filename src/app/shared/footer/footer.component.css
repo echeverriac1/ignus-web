@@ -1,6 +1,9 @@
    a{
     color:#c2c2c2;
    }
+   .select{
+     color: #c2c2c2;
+   }
    .icon-footer {
      background: #a2a0a0;
      color: #fff;
@@ -12,6 +15,10 @@
      display: block;
      border-radius: 50px;
    }
+   .form-contact{
+    margin-bottom:5px;
+    background: #727272;
+   }
    .title h4{
        color:#18a689;
    }
@@ -22,13 +29,6 @@
    .rif{
     color:#c2c2c2;
    }
-   .form-contact{
-       margin-bottom:5px;
-       background: #727272;
-   }
-   .select{
-     color:#c2c2c2;
-   }  
    #btn1 {
      width: 100%;
      display: flex;
