@@ -30,7 +30,7 @@ export class GlobalService {
   tipo:String;
 
   constructor(public http: HttpClient) {
-    this.apiBaseUrl = 'http://ignus-backend-jchiquin.c9users.io';
+    this.apiBaseUrl = 'https://ignus-backend-jchiquin.c9users.io';
   }
 
 
@@ -56,13 +56,23 @@ export class GlobalService {
 
   addModel(model,tipo: String,httpOptions=httpOptionsDefault){
     return new Promise(resolve =>{
-      this.http.post(this.apiBaseUrl + "" + tipo,model,httpOptions).subscribe(data =>{
+      this.http.post(this.apiBaseUrl + "" + tipo,model).subscribe(data =>{
         resolve(data);
       }, err =>{
         console.log(err);
       })
     })
   }
+
+  // addModel(model,tipo: String,httpOptions=httpOptionsDefault){
+  //   return new Promise(resolve =>{
+  //     this.http.post(this.apiBaseUrl + "" + tipo,model,httpOptions).subscribe((data:any) =>{
+  //       resolve(data);
+  //     }, (err:any) =>{
+  //       console.log(err);
+  //     })
+  //   })
+  // }
 
   updateModel(id, model, tipo: String,httpOptions=httpOptionsDefault){
     return new Promise(resolve =>{
