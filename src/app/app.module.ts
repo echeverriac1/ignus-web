@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -17,6 +18,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { SelectContactComponent } from './shared/select-contact/select-contact.component';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { SelectContactComponent } from './shared/select-contact/select-contact.c
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    CommonModule,
   ],
   providers: [
     GlobalService,

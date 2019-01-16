@@ -1,8 +1,8 @@
    a{
     color:#c2c2c2;
    }
-   input:focus{
-    outline:1px dashed red;
+   .select{
+     color: #c2c2c2;
    }
    .icon-footer {
      background: #a2a0a0;

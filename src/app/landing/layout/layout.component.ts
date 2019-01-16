@@ -19,14 +19,17 @@ export class LayoutComponent implements OnInit{
   }
 
   ngOnInit() {
-    this._globalService.getModel('/api/agency')
-     .then((result) => {
-       this.agency=result['data'];
-       this.logo= this.agency['logo']['url'];
-     },(err) => {
-       console.log(err);
-     });
+    this.getAgency();
+  }
 
+  getAgency(){
+    this._globalService.getModel('/api/agency')
+    .then((result) => {
+      this.agency=result['data'];
+      this.logo= this.agency['logo']['url'];
+    },(err) => {
+      console.log(err);
+    });
   }
 
 
