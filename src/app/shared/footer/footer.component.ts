@@ -13,13 +13,14 @@ export class FooterComponent implements OnInit {
   agency: any;
   typeContacts:any;
   logo:any;
-
+  Subject:any;
   contact:any;
   new:any;
 
   constructor(public _globalService: GlobalService) {
     this.agency=[];
     this.typeContacts=[];
+    this.Subject=[];
     this.logo={};
     
     this.contact={};
@@ -31,6 +32,7 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
     this.getAgency();
     this.getTypeContactForSelect();
+    this.getSubjectForSelect();
   }
 
   getAgency(){
@@ -52,32 +54,26 @@ export class FooterComponent implements OnInit {
      });
   }
 
-
+getSubjectForSelect(){
+    this._globalService.getModel('/api/subject')
+     .then((result) => {
+      this.Subject=result['data'];
+     },(err) => {
+       console.log(err);
+     });
+  }
 
   
   saveContact() {
-    this.new = JSON.stringify({
-      name: this.contact.name,
-      email: this.contact.email,
-      description: this.contact.description,
-      TypeContactId: this.contact.TypeContactId,
-      SubjectId: this.contact.SubjectId
-    });
+    if ( this.contact.email !== '' || this.contact.TypeContactId !== '' || this.contact.SubjectId !== ''
+        || this.contact.description !== '' ){
 
-    
-    alert(this.new);
-    console.log(this.new);
-       
-      // this._globalService.addModel(this.new, "/api/contact").then(
-      //   result => {
-      //     console.log(result);
-      //     alert("Usted ha enviado el mensaje exitosamente!");
-      //   },
-      //   err => {
-      //     console.log(err);
-      //   }
-      // );
-
+      this._globalService.addModel(this.contact,"/api/contact").then(data =>{
+        alert('Mensaje enviado');
+      })
+    }
+      const data = JSON.parse(localStorage.getItem("contact"));
+      console.log(data);
   
   }
 }
