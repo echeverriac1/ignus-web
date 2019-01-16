@@ -12,17 +12,20 @@ export class ContactComponent implements OnInit {
   agency: any;
   contact: any;
   combo : any;
+  combo1: any;
 
   constructor(public _globalService: GlobalService) {
     this.agency=[];
     this.contact={}; 
     this.combo=[];
+    this.combo1=[];
+
   }
 
 
   send(){
 
-    if ( this.contact.email !== '' || this.contact.type !== '' || this.contact.reason !== ''
+    if ( this.contact.email !== '' || this.contact.TypeContactId !== '' || this.contact.SubjectId !== ''
         || this.contact.description !== '' ){
 
       this._globalService.addModel(this.contact,"/api/contact").then(data =>{
@@ -44,7 +47,7 @@ export class ContactComponent implements OnInit {
        console.log(err);
      });
 
-     this._globalService.getModel('/api/contact')
+     this._globalService.getModel('/api/typeContact')
      .then((result) => {
       console.log(result['data']);
        this.combo=result['data'];
@@ -54,6 +57,19 @@ export class ContactComponent implements OnInit {
        console.log(err);
      
       });
+
+this._globalService.getModel('/api/subject')
+     .then((result) => {
+      console.log(result['data']);
+       this.combo1=result['data'];
+     
+     
+      },(err) => {
+       console.log(err);
+     
+      });
+
+
 
 
   }
