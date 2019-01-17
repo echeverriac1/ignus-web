@@ -22,29 +22,32 @@
             </div>
             <br>
             <div class="container">
+              <!-- SI HAY PROPIEDADES, MOSTRAR CATÁLOGO-->
               <div class="row">
-                  <div class="col-md-3">
+                  <div class="col-md-3" *ngFor="let property of properties">
                       <div class="ibox">
                           <div class="ibox-content product-box">
       
                               <div class="product-imitation">
-                                  [ INFO ]
+                                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" [alt]="property.Publication.images[0].description" [src]="property.Publication.images[0].url" data-holder-rendered="true" img="reponsive rounded" style="height: 225px; width: 100%; display: block;">
                               </div>
                               <div class="product-desc">
                                   <span class="product-price">
-                                      BsS10
+                                      BsS{{ property.Publication.price }}
                                   </span>
-                                  <small class="text-muted">Tipo de servicio</small>
-                                  <a href="#" class="product-name"> Inmueble</a>
+                                  <small class="text-muted">{{ property.typeProperty.name }} en {{ property.TypeService.name }} | 113 m²</small>
+                                  <p class="product-name"> {{property.Publication.title }}</p>
       
       
       
                                   <div class="small m-t-xs">
-                                      Many desktop publishing packages and web page editors now.
+                                      {{ property.Publication.description }}
                                   </div>
-                                  <div class="m-t text-righ">
-      
-                                      <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
+                                  <div class="row">
+                                      <div class="m-t text-righ">
+                                          <a style="margin-right: 2px" href="#" class="btn btn-xs btn-outline btn-primary">Detalle</a>
+                                          <a href="#" class="btn btn-xs btn-outline btn-primary">Solicitar</a>
+                                      </div>
                                   </div>
                               </div>
                           </div>

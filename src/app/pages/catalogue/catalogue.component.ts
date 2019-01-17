@@ -7,18 +7,19 @@ import { GlobalService } from '../../providers/global.service';
   styleUrls: ['./catalogue.component.css']
 })
 export class CatalogueComponent implements OnInit {
-  property: any;
+  properties: any;
 
   constructor(public _globalService: GlobalService) { 
-    this.property=[];
+    this.properties=[];
 
   }
 
   getProperty(){
-    this._globalService.getModel('/api/property')
+    this._globalService.getModel('/api/property/catalogue')
      .then((result) => {
-       console.log(result['data']);
-       this.property=result['data'];
+      console.log('FUCK YEAH!')
+      console.log(result['data']);
+       this.properties=result['data'];
      },(err) => {
        console.log(err);
      });

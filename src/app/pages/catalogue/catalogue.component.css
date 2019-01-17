@@ -18,10 +18,12 @@
 .ibox:hover{
     box-shadow: 0 0 11px #999999;
 }
+
 .product-box {
     padding: 0;
     border: 1px solid #e7eaec;
 }
+
 .ibox-content {
     background-color: #ffffff;
     color: inherit;
@@ -30,9 +32,9 @@
     border-style: solid solid none;
     border-width: 1px 0;
 }
+
 .product-imitation {
     text-align: center;
-    padding: 90px 0;
     background-color: #f8f8f9;
     color: #bebec3;
     font-weight: 600;
