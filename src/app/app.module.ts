@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { GlobalService } from './providers/global.service';
 
@@ -18,6 +19,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { SelectContactComponent } from './shared/select-contact/select-contact.component';
+import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 
 
 @NgModule({
@@ -32,7 +34,8 @@ import { SelectContactComponent } from './shared/select-contact/select-contact.c
     ContactComponent,
     LoginComponent,
     RegisterComponent,
-    SelectContactComponent
+    SelectContactComponent,
+    CatalogueComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { SelectContactComponent } from './shared/select-contact/select-contact.c
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
+    NgbModule,
   ],
   providers: [
     GlobalService,

@@ -16,7 +16,7 @@ export class ServicesComponent implements OnInit{
     this.typeServices=[];
     
   }
-
+  
   sliderShow(){
     console.log(this.typeServices.length)
     this.show = false;
