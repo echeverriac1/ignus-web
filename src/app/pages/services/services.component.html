@@ -1,5 +1,5 @@
-  <div class="container">
-   <div class="row" *ngIf="this.typeServices.length == 4; else slider">
+<div class="container">
+   <div class="row">
          <div class="col-md-3" *ngFor="let typeService of typeServices">
                <div class="card mb-4 box-shadow">
                   <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" [alt]="typeService.name" [src]="typeService.urlImage" data-holder-rendered="true" img="reponsive rounded" style="height: 225px; width: 100%; display: block;">
@@ -14,14 +14,7 @@
                   </div>
                </div>
             </div>
-            <p>OTRA CSOSA</p>
     </div>
-    
-    <ng-template #slider>
-      <div class="row">
-         <p>SE CREA UN SLIDER</p>
-      </div>
-    </ng-template>
-  </div>
+</div>
 
   <br><br>
