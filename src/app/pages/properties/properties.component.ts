@@ -18,8 +18,8 @@ export class PropertiesComponent implements OnInit {
   }
 
   showProperty() {
-    // console.log(  this.index );
-    this.router.navigate( ['/property', this.index] );
+    console.log(  this.index );
+    this.router.navigate( ['/propiedad', this.index] );
     // this.heroeSeleccionado.emit( this.index );
   }
 

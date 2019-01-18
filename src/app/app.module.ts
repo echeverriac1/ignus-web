@@ -20,6 +20,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { SelectContactComponent } from './shared/select-contact/select-contact.component';
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { PropertiesComponent } from './pages/properties/properties.component';
+import { PropertyComponent } from './pages/property/property.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { PropertiesComponent } from './pages/properties/properties.component';
     RegisterComponent,
     SelectContactComponent,
     CatalogueComponent,
-    PropertiesComponent
+    PropertiesComponent,
+    PropertyComponent
   ],
   imports: [
     BrowserModule,

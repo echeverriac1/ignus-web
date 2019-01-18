@@ -7,16 +7,16 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
-// import { PropertyComponent } from './components/property/property.component';
+import { PropertyComponent } from './pages/property/property.component';
 
 
 const routes: Routes = [
   { path: '', component: LayoutComponent },
   { path: 'login', component: LoginComponent },
   { path: 'contacto', component: ContactComponent },
-  { path: 'catalogo', component: CatalogueComponent},
+  { path: 'propiedades', component: CatalogueComponent},
   { path: 'nosotros', component: AboutComponent },
-  //{ path: 'inmueble/:id', component: PropertyComponent },
+  { path: 'propiedad/:id', component: PropertyComponent },
   { path: 'suscribir', component: RegisterComponent },
 ];
 

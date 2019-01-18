@@ -27,7 +27,7 @@ export class CatalogueComponent implements OnInit {
   }
 
   showProperty( idx:number ){
-    this.router.navigate( ['/property',idx] );
+    this.router.navigate( ['/propiedad',idx] );
   }
 
   ngOnInit() {
