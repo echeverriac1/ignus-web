@@ -301,7 +301,7 @@ h1 {
 }
 .gray-section {
   background: #f4f4f4;
-  margin-top: 60px;
+  margin-top: 150px;
 }
 .team-member {
   text-align: center;
@@ -372,7 +372,7 @@ li.pricing-title {
   background-image: url('../img/word_map.png');
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 /* Buttons - only primary custom button
 ------------------------- */
