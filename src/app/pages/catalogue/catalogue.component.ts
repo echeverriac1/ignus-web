@@ -16,7 +16,7 @@ export class CatalogueComponent implements OnInit {
 
   }
 
-  getProperty(){
+  getProperties(){
     this._globalService.getModel('/api/property/catalogue')
      .then((result) => {
       console.log(result['data']);
@@ -31,7 +31,7 @@ export class CatalogueComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getProperty();
+    this.getProperties();
   }
 
 }

@@ -7,10 +7,10 @@
       </div>
       <div class="product-desc">
           <span class="product-price">
-              BsS{{ property.Publication.price }}
+              {{ property.Publication.price | currency :"BsS" }}
           </span>
-          <small class="text-muted">{{ property.typeProperty.name }} en {{ property.TypeService.name }} | 113 m²</small>
-          <p class="product-name"> {{property.Publication.title }}</p>
+          <small class="text-muted">{{ property.typeProperty.name | titlecase}} en {{ property.TypeService.name | lowercase }} | 113 m²</small>
+          <p class="product-name"> {{property.Publication.title | uppercase}}</p>
 
 
 
@@ -23,7 +23,10 @@
                   type="button" class="btn btn-xs btn-outline btn-primary ">
                       Detalle
                   </button>
-                  <a href="#" class="btn btn-xs btn-outline btn-primary">Solicitar</a>
+                  <button routerLink="/propiedad/{{ property.id }}" style="margin-right: 2px"
+                  type="button" class="btn btn-xs btn-outline btn-primary ">
+                      Solicitar
+                  </button>
               </div>
           </div>
       </div>

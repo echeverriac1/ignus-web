@@ -46,7 +46,7 @@ export class GlobalService {
 
   getModel_Id(id: String, tipo: String,httpOptions=httpOptionsDefault){
     return new Promise(resolve =>{
-      this.http.get(this.apiBaseUrl + "" + tipo + '/' + id,httpOptions).subscribe(data =>{
+      this.http.get(this.apiBaseUrl + "" + tipo + '/' + id).subscribe(data =>{
         resolve(data);
       }, err =>{
         console.log({id: id,tipo: tipo, httpOptions: httpOptions});

@@ -17,7 +17,6 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { SelectContactComponent } from './shared/select-contact/select-contact.component';
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { PropertiesComponent } from './pages/properties/properties.component';
 import { PropertyComponent } from './pages/property/property.component';
@@ -35,7 +34,6 @@ import { PropertyComponent } from './pages/property/property.component';
     ContactComponent,
     LoginComponent,
     RegisterComponent,
-    SelectContactComponent,
     CatalogueComponent,
     PropertiesComponent,
     PropertyComponent
