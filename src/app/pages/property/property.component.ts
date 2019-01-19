@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { GlobalService } from '../../providers/global.service';
@@ -8,23 +8,38 @@ import { GlobalService } from '../../providers/global.service';
   templateUrl: './property.component.html',
   styleUrls: ['./property.component.css']
 })
+
+@Injectable()
 export class PropertyComponent implements OnInit {
+  catalogue:any;
   property:any;
-  array:any
+  publication:any;
+  typeService:any;
+  aux:any;
 
   constructor(private route: ActivatedRoute, private _globalService: GlobalService, private location: Location) { 
+    this.catalogue=[];
     this.property=[];
-    this.array=[];
+    this.publication=[];
+    this.typeService=[];
+    this.aux={}
   }
 
 
   getProperty(){
     const id = this.route.snapshot.paramMap.get('id');
 
-    this._globalService.getModel(`/api/property/${id}`)
+    this._globalService.getModel(`/api/property/catalogue`)
      .then((result) => {
-      console.log(result['data']);
-       this.property=result['data'];
+
+       this.catalogue=result['data'];
+       this.property = this.catalogue.filter( property => property.id == id)
+       this.aux = this.property[0];
+       this.publication =this.aux.Publication;
+       this.typeService =this.aux.TypeService;
+
+       console.log("ESTA ES LA PROPIEDAD PERRO")
+       console.log(this.aux);
      },(err) => {
        console.log(err);
      });
@@ -32,6 +47,7 @@ export class PropertyComponent implements OnInit {
 
   ngOnInit() {
     this.getProperty();
+    
   }
 
 }

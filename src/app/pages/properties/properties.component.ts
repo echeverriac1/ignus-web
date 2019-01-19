@@ -18,9 +18,9 @@ export class PropertiesComponent implements OnInit {
   }
 
   showProperty() {
-    console.log(  this.index );
-    this.router.navigate( ['/propiedad', this.index] );
-    // this.heroeSeleccionado.emit( this.index );
+
+    //this.router.navigate( ['/propiedad', this.index] );
+    //this.propertySelected.emit( this.index );
   }
 
   ngOnInit() {

@@ -15,9 +15,6 @@
     padding: 30px 30px 50px 30px;
 }
 
-.product-images {
-    margin: 0 20px;
-}
 
 .slick-prev {
     left: -25px;
@@ -50,12 +47,6 @@
     border: none;
     outline: none;
     background: transparent;
-}
-
-.image-imitation {
-    background-color: #f8f8f9;
-    text-align: center;
-    padding: 200px 0;
 }
 
 .font-bold {
