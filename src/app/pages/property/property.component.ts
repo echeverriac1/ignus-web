@@ -37,9 +37,6 @@ export class PropertyComponent implements OnInit {
        this.aux = this.property[0];
        this.publication =this.aux.Publication;
        this.typeService =this.aux.TypeService;
-
-       console.log("ESTA ES LA PROPIEDAD PERRO")
-       console.log(this.aux);
      },(err) => {
        console.log(err);
      });

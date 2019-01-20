@@ -22,6 +22,7 @@ import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { PropertiesComponent } from './pages/properties/properties.component';
 import { PropertyComponent } from './pages/property/property.component';
 import { GalleryComponent } from './shared/gallery/gallery.component';
+import { FiltersComponent } from './shared/filters/filters.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { GalleryComponent } from './shared/gallery/gallery.component';
     CatalogueComponent,
     PropertiesComponent,
     PropertyComponent,
-    GalleryComponent
+    GalleryComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
