@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
 import { GlobalService } from './providers/global.service';
 
 import { AppComponent } from './app.component';
@@ -17,6 +18,11 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { CatalogueComponent } from './pages/catalogue/catalogue.component';
+import { PropertiesComponent } from './pages/properties/properties.component';
+import { PropertyComponent } from './pages/property/property.component';
+import { GalleryComponent } from './shared/gallery/gallery.component';
+import { FiltersComponent } from './shared/filters/filters.component';
 
 
 @NgModule({
@@ -30,7 +36,12 @@ import { RegisterComponent } from './pages/register/register.component';
     AboutComponent,
     ContactComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CatalogueComponent,
+    PropertiesComponent,
+    PropertyComponent,
+    GalleryComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +49,7 @@ import { RegisterComponent } from './pages/register/register.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    CommonModule,
+    CommonModule
   ],
   providers: [
     GlobalService,

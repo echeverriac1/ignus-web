@@ -1,0 +1,31 @@
+<div class="catalogue">
+    <div class="container animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-12 text-center"><br>
+                <div class="navy-line"></div>
+                <h1>Catálogo de inmuebles</h1>
+                <p>Aquí puedes encontrar el inmueble que deseas.</p><br/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <input type="text" class="form-control input-search" placeholder="¿Que estás buscando?"> 
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button> 
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row"><br>
+            <div class="col-md-2"><br> 
+                <app-filters></app-filters>
+            </div>
+            <div class="col-md-10">
+                <div class="row">
+                    <app-properties  (propertySelected)="showProperty( $event )" [property]="property" *ngFor="let property of properties; let i = index"></app-properties>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
