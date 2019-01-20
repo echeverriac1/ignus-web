@@ -5,25 +5,23 @@
                   <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
                   Tipo de Servicio</a>                
               </div>
-              <div id="collapse2" class="panel-collapse collapse"><br>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. 
+              <div id="collapse2" class="panel-collapse collapse" ><br>
+                <div class="checkbox" *ngFor="let typeService of typeServices">
+                    <label><input type="checkbox" value="">{{ typeService.name }}</label>
+                </div>
               </div>
             </div>
       </li>
       <li class="list-group-item">
           <div >
               <div class="panel-heading"> 
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
                   Tipo de inmueble</a>                
               </div>
-              <div id="collapse2" class="panel-collapse collapse"><br>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. 
+              <div id="collapse3" class="panel-collapse collapse"><br>
+                <div class="checkbox" *ngFor="let typeProperty of typeProperties">
+                    <label><input type="checkbox" value="">{{ typeProperty.name }}</label>
+                </div>
               </div>
             </div>
       </li>
