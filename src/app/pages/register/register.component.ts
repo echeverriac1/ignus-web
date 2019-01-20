@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as moment from 'moment';
 import { GlobalService } from '../../providers/global.service';
 
 @Component({
@@ -9,19 +9,35 @@ import { GlobalService } from '../../providers/global.service';
 })
 
 export class RegisterComponent implements OnInit {
+  
+  public myDate = new Date();
   agency: any;
   logo: any;
 
   client:any;
   new:any;
 
+ 
+ public notificationEmail:any;
+ public notificationSMS:any;
+ public notificationWS:any;
+ public birthDate:any;
+ 
+
+
+
   constructor(public _globalService: GlobalService) {
     this.agency=[];
     this.logo=[];
 
+this.birthDate = moment(this.myDate).format('DD/MM/YYYY');
+
     this.client={};
     this.new={};
-    
+    this.notificationEmail=true;
+    this.notificationSMS=false;
+    this.notificationWS=false
+
   }
 
   getAgency(){
@@ -62,8 +78,11 @@ export class RegisterComponent implements OnInit {
 
   subscribe(){
 
-    if (this.client.username !== '' || this.client.firstName !== '' || this.client.lastName !== ''
-        || this.client.gender !== '' || this.client.birthDate !== '' ){
+if(this.client.username !==''|| this.client.firstName !==''|| this.client.lastName !==''|| this.client.gender !==''
+|| this.client.phoneNumber !==''|| this.client.birthDate !==''|| this.client.notificationEmail !==''
+|| this.client.notificationSMS !==''|| this.client.notificationWS !=='')
+
+   {
 
       this._globalService.addModel(this.client,"/api/user/client").then(data =>{
         alert('CLIENTE SUSCRITO');
