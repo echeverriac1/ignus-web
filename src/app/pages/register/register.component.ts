@@ -10,7 +10,7 @@ import { GlobalService } from '../../providers/global.service';
 
 export class RegisterComponent implements OnInit {
   
-  public myDate = new Date();
+  //public myDate = new Date();
   agency: any;
   logo: any;
 
@@ -18,9 +18,9 @@ export class RegisterComponent implements OnInit {
   new:any;
 
  
- public notificationEmail:any;
- public notificationSMS:any;
- public notificationWS:any;
+notificationEmail:any;
+notificationSMS:any;
+notificationWS:any;
  public birthDate:any;
  
 
@@ -30,13 +30,14 @@ export class RegisterComponent implements OnInit {
     this.agency=[];
     this.logo=[];
 
-this.birthDate = moment(this.myDate).format('DD/MM/YYYY');
+this.birthDate = moment(this.birthDate).format('DD/MM/YYYY');
 
     this.client={};
     this.new={};
-    this.notificationEmail=true;
+    this.notificationEmail=false;
     this.notificationSMS=false;
-    this.notificationWS=false
+    this.notificationWS=false;
+   
 
   }
 
@@ -52,44 +53,25 @@ this.birthDate = moment(this.myDate).format('DD/MM/YYYY');
 
   
 
-  // subscribe(){
-
-  //   this.new = JSON.stringify({
-  //     username: this.client.username,
-  //     firstName: this.client.firstName,
-  //     lastName: this.client.lastName,
-  //     gender: this.client.gender,
-  //     birthDate: this.client.birthDate,
-  //   });
-    
-  //   this._globalService.addModel(this.new, "/api/user/client")
-  //   .then(result => {
-  //       console.log("EPA ESTAS POR AQUI");
-  //       console.log(result);
-  //       alert("Usted ha enviado el mensaje exitosamente!");
-  //     },
-  //     err => {
-  //       console.log("ESTA ENTRANDO EN EL ERROR");
-  //       console.log(err);
-  //     }
-  //   );
-  // }
+  
 
 
   subscribe(){
 
 if(this.client.username !==''|| this.client.firstName !==''|| this.client.lastName !==''|| this.client.gender !==''
-|| this.client.phoneNumber !==''|| this.client.birthDate !==''|| this.client.notificationEmail !==''
-|| this.client.notificationSMS !==''|| this.client.notificationWS !=='')
+|| this.client.phoneNumber !==''|| this.client.birthDate !=='' || this.client.notificationEmail !== '' 
+|| this.client.notificationWS !=='' || this.client.notificationSMS !== '')
 
    {
 
       this._globalService.addModel(this.client,"/api/user/client").then(data =>{
         alert('CLIENTE SUSCRITO');
       })
+    
+    
     }
       const data = JSON.parse(localStorage.getItem("client"));
-      console.log(data);
+      console.log([data]);
   }
 
 
