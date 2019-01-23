@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { AgmCoreModule } from '@agm/core';
 
 import { GlobalService } from './providers/global.service';
 
@@ -24,6 +24,7 @@ import { PropertyComponent } from './pages/property/property.component';
 import { GalleryComponent } from './shared/gallery/gallery.component';
 import { FiltersComponent } from './shared/filters/filters.component';
 import { SpecificationsComponent } from './pages/property/specifications/specifications.component';
+import { MapComponent } from './shared/map/map.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { SpecificationsComponent } from './pages/property/specifications/specifi
     PropertyComponent,
     GalleryComponent,
     FiltersComponent,
-    SpecificationsComponent
+    SpecificationsComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,10 @@ import { SpecificationsComponent } from './pages/property/specifications/specifi
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD-VkHwEAk4z_Ul91iQpB0Rqv15rtGVIJU'
+    })
   ],
   providers: [
     GlobalService,
