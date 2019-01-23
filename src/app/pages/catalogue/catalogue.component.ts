@@ -29,7 +29,7 @@ export class CatalogueComponent implements OnInit {
   showProperty( idx:number ){
     this.router.navigate( ['/propiedad',idx] );
   }
-
+  pageActual:number =1;
   ngOnInit() {
     this.getProperties();
   }
