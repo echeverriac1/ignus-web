@@ -2,5 +2,7 @@
     color: greenyellow
 }
 .list-group-content{
-   background: #c2c2c4
+   background: #c2c2c4;
+   font-weight: bold;
+   color:white;
 }
