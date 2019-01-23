@@ -1,12 +1,31 @@
-import { Component } from '@angular/core';
-import { MouseEvent } from '@agm/core';
+import { Component, OnInit, Injectable } from '@angular/core';
+import { Location } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { GlobalService } from '../../providers/global.service';
+
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: [ './map.component.css' ]
 })
-export class MapComponent  {
+
+export class MapComponent  implements OnInit {
+  catalogue:any;
+  property:any;
+  aux:any;
+
+
+  constructor(private route: ActivatedRoute, private _globalService: GlobalService, private location: Location) { 
+    this.catalogue=[];
+    this.property=[];
+    this.aux={}
+  }
+  
+  ngOnInit(): void {
+    this.getProperty();
+  }
+
   // google maps zoom level
   zoom: number = 15;
   
@@ -14,41 +33,30 @@ export class MapComponent  {
   lat: number = 51.673858;
   lng: number = 7.815982;
 
-  clickedMarker(label: string, index: number) {
-    console.log(`clicked the marker: ${label || index}`)
+
+
+  getProperty(){
+  const id = this.route.snapshot.paramMap.get('id');
+
+    this._globalService.getModel(`/api/property/catalogue`)
+     .then((result) => {
+
+       this.catalogue=result['data'];
+       this.property = this.catalogue.filter( property => property.id == id)
+       this.aux = this.property[0];
+     },(err) => {
+       console.log(err);
+     });
   }
-  
-  mapClicked($event: MouseEvent) {
-    this.markers.push({
-      lat: $event.coords.lat,
-      lng: $event.coords.lng,
-      draggable: true
-    });
-  }
-  
-  markerDragEnd(m: marker, $event: MouseEvent) {
-    console.log('dragEnd', m, $event);
-  }
-  
+
+
   markers: marker[] = [
 	  {
 		  lat: 51.673858,
 		  lng: 7.815982,
 		  label: 'A',
-		  draggable: true
-	  },
-	  {
-		  lat: 51.373858,
-		  lng: 7.215982,
-		  label: 'B',
 		  draggable: false
 	  },
-	  {
-		  lat: 51.723858,
-		  lng: 7.895982,
-		  label: 'C',
-		  draggable: true
-	  }
   ]
 }
 
