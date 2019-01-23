@@ -20,9 +20,9 @@
                         <div class="col-md-7">
 
                             <h2 class="font-bold m-b-xs">
-                               {{ aux.typeProperty.name }} en {{ typeService.name | lowercase }}
+                               {{ typeProperty.name }} en {{ typeService.name | lowercase }}
                             </h2>
-                            <small>{{ aux.state.name }} / {{ aux.municipality.name }} / {{ aux.parish.name }}</small>
+                            <small>{{ state.name }} / {{ municipality.name }} / {{ parish.name }}</small>
                             <div class="m-t-md">
                                 <h2 class="product-main-price">{{ publication.price | currency:"BsS"}}</h2>
                             </div>
@@ -34,15 +34,9 @@
                                 <p>{{ publication.description }}</p>
                                
                             </div>
-                            <dl class="small m-t-md">
-                                <dt>Especificaciones detalladas:</dt>
-                                <dd>A description list is perfect for defining terms.</dd>
-                                <dt>Euismod</dt>
-                                <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-                                <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-                                <dt>Malesuada porta</dt>
-                                <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-                            </dl>
+                            <div>
+                                <app-specifications></app-specifications>
+                            </div>
                             <hr>
 
                             <div>
