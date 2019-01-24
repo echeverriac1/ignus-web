@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 import { GlobalService } from './providers/global.service';
 
@@ -58,6 +59,7 @@ import { MapComponent } from './shared/map/map.component';
     CommonModule,
     NgxPaginationModule,
     NgxSpinnerModule,
+    SlickCarouselModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD-VkHwEAk4z_Ul91iQpB0Rqv15rtGVIJU'
     })

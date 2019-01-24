@@ -34,7 +34,6 @@ export class GalleryComponent implements OnInit {
        this.aux = this.property[0];
        this.publication =this.aux.Publication;
        this.images=this.publication.images;
-       console.log(this.images )
        
      },(err) => {
        console.log(err);

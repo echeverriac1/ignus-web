@@ -24,8 +24,10 @@
     "core-js": "^2.5.5",
     "ngx-bootstrap-modal": "^2.0.1",
     "ngx-pagination": "^3.2.1",
+    "ngx-slick-carousel": "^0.4.4",
     "ngx-spinner": "^7.0.0",
     "rxjs": "^6.1.0",
+    "slick-carousel": "^1.8.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

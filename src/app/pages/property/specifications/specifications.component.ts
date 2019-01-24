@@ -33,7 +33,6 @@ export class SpecificationsComponent implements OnInit {
        this.property = this.catalogue.filter( property => property.id == id)
        this.aux = this.property[0];
        this.typeSpecifications =this.aux.typeSpecifications;
-       console.log(this.typeSpecifications)
        
      },(err) => {
        console.log(err);

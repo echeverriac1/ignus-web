@@ -2,7 +2,7 @@
     <li class="list-group-item list-group-content" *ngFor="let type of typeSpecifications">
         <div >
             <div class="panel-heading"> 
-                <a data-toggle="collapse" data-parent="#accordion"  style="color: white" [attr.href]="'#'+ type.id">
+                <a data-toggle="collapse" data-parent="#accordion"  style="color: rgb(112, 112, 112)" [attr.href]="'#'+ type.id">
                 {{ type.name | uppercase }}</a>                
             </div>
             <div id="{{type.id}}" class="panel-collapse collapse" ><br>
