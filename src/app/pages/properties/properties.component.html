@@ -10,12 +10,12 @@
               {{ property.Publication.price | currency :"BsS" }}
           </span>
           <small class="text-muted">{{ property.typeProperty.name | titlecase}} en {{ property.TypeService.name | lowercase }} | 113 m²</small>
-          <p class="product-name"> {{property.Publication.title | uppercase | slice:0-80}}</p>
+          <p class="product-name"> {{property.Publication.title | uppercase | slice:0:25}}</p>
 
 
 
           <div class="small m-t-xs description">
-            {{ property.Publication.description | slice:0-80}}
+            {{ property.Publication.description | slice:0:80}}
           </div>
           <div class="row">
               <div class="m-t text-righ">

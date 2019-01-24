@@ -7,6 +7,7 @@ import { AgmCoreModule } from '@agm/core';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import { GlobalService } from './providers/global.service';
 
@@ -28,6 +29,7 @@ import { GalleryComponent } from './shared/gallery/gallery.component';
 import { FiltersComponent } from './shared/filters/filters.component';
 import { SpecificationsComponent } from './pages/property/specifications/specifications.component';
 import { MapComponent } from './shared/map/map.component';
+import { ListPromotionsComponent } from './pages/list-promotions/list-promotions.component';
 
 
 @NgModule({
@@ -48,7 +50,8 @@ import { MapComponent } from './shared/map/map.component';
     GalleryComponent,
     FiltersComponent,
     SpecificationsComponent,
-    MapComponent
+    MapComponent,
+    ListPromotionsComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +63,7 @@ import { MapComponent } from './shared/map/map.component';
     NgxPaginationModule,
     NgxSpinnerModule,
     SlickCarouselModule,
+    CarouselModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD-VkHwEAk4z_Ul91iQpB0Rqv15rtGVIJU'
     })
