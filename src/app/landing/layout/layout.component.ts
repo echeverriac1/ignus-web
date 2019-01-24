@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { GlobalService } from '../../providers/global.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-layout',
@@ -12,7 +13,7 @@ export class LayoutComponent implements OnInit{
   agency: any;
   logo:any;
 
-  constructor(public _globalService: GlobalService) {
+  constructor(public _globalService: GlobalService,private spinner: NgxSpinnerService) {
     this.agency=[];
     this.logo={};
     
@@ -20,6 +21,14 @@ export class LayoutComponent implements OnInit{
 
   ngOnInit() {
     this.getAgency();
+
+     /** spinner starts on init */
+     this.spinner.show();
+ 
+     setTimeout(() => {
+         /** spinner ends after 5 seconds */
+         this.spinner.hide();
+     }, 5000);
   }
 
   getAgency(){

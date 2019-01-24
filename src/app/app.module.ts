@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
-import {NgxPaginationModule} from 'ngx-pagination'; // 
+import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 import { GlobalService } from './providers/global.service';
 
@@ -56,6 +57,7 @@ import { MapComponent } from './shared/map/map.component';
     FormsModule,
     CommonModule,
     NgxPaginationModule,
+    NgxSpinnerModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD-VkHwEAk4z_Ul91iQpB0Rqv15rtGVIJU'
     })
