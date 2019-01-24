@@ -23,22 +23,25 @@
             </div>
             <div class="col-md-10">
                 <div class="row">
-                    <app-properties  (propertySelected)="showProperty( $event )" [property]="property" *ngFor="let property of properties | paginate: { itemsPerPage: 2, currentPage: pageActual }; let i = index" ></app-properties>
+                    <app-properties  (propertySelected)="showProperty( $event )" [property]="property" *ngFor="let property of properties | paginate: { itemsPerPage: 9, currentPage: pageActual }; let i = index" ></app-properties>
                 </div>
                 <div class="row">
                     <style>
                         .my-pagination /deep/ .ngx-pagination .current {
                             background: #1ab394;
+                            align-items: center;
                         }
-                    </style>
-                    <pagination-controls 
-                        class="my-pagination" 
-                        responsive="true" 
-                        previousLabel=" "
-                        nextLabel=" " 
-                        autoHide="true"
-                        (pageChange)="pageActual = $event">
-                    </pagination-controls>
+                    </style><br>
+                    <div class="col-lg-4 col-lg-offset-4">
+                        <pagination-controls 
+                            class="my-pagination" 
+                            responsive="true" 
+                            previousLabel=" "
+                            nextLabel=" " 
+                            autoHide="true"
+                            (pageChange)="pageActual = $event">
+                        </pagination-controls>
+                    </div>
                 </div>
             </div>
         </div>
