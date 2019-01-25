@@ -19,7 +19,7 @@
         </div>
         <div class="row"><br>
             <div class="col-md-12">
-                <div class="row" *ngFor="let property of properties">
+                <div class="row" *ngFor="let property of properties | paginate: { itemsPerPage: 5, currentPage: pageActual }">
                     <div class="hr-line-dashed"></div>
                     <div class="search-result">
                         <h3><a href="#/propiedad/{{property.id}}">{{ property.nameDisplay }}</a></h3>
@@ -31,7 +31,7 @@
                     </div><hr>
                 </div>
                 <hr>
-                <!-- <div class="row">
+                <div class="row">
                     <style>
                         .my-pagination /deep/ .ngx-pagination .current {
                             background: #1ab394;
@@ -48,7 +48,7 @@
                             (pageChange)="pageActual = $event">
                         </pagination-controls>
                     </div>
-                </div> -->
+                </div> 
             </div>
         </div>
     </div>
