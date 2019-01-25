@@ -8,8 +8,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { PropertyComponent } from './pages/property/property.component';
-import {PromotionsComponent } from './pages/promotions/promotions.component';
-import { PromotionDetailsComponent } from './pages/promotion-details/promotion-details.component'
+import { PromotionsComponent } from './pages/promotions/promotions.component';
 
 const routes: Routes = [
   { path: '', component: LayoutComponent },
@@ -19,8 +18,7 @@ const routes: Routes = [
   { path: 'nosotros', component: AboutComponent },
   { path: 'propiedad/:id', component: PropertyComponent },
   { path: 'suscribir', component: RegisterComponent },
-  { path: 'promociones', component: PromotionsComponent },
-  { path: 'promociones/:id', component: PromotionDetailsComponent },
+  { path: 'promociones/:id', component: PromotionsComponent },
 ];
 
 

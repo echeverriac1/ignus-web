@@ -31,8 +31,6 @@ import { SpecificationsComponent } from './pages/property/specifications/specifi
 import { MapComponent } from './shared/map/map.component';
 import { ListPromotionsComponent } from './pages/list-promotions/list-promotions.component';
 import { PromotionsComponent } from './pages/promotions/promotions.component';
-import { PromotionDetailsComponent } from './pages/promotion-details/promotion-details.component';
-
 
 @NgModule({
   declarations: [
@@ -55,7 +53,6 @@ import { PromotionDetailsComponent } from './pages/promotion-details/promotion-d
     MapComponent,
     ListPromotionsComponent,
     PromotionsComponent,
-    PromotionDetailsComponent
   ],
   imports: [
     BrowserModule,
