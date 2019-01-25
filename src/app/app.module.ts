@@ -8,6 +8,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { GlobalService } from './providers/global.service';
 
@@ -64,6 +65,7 @@ import { PromotionsComponent } from './pages/promotions/promotions.component';
     NgxPaginationModule,
     NgxSpinnerModule,
     SlickCarouselModule,
+    ModalModule.forRoot(),
     CarouselModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD-VkHwEAk4z_Ul91iQpB0Rqv15rtGVIJU'

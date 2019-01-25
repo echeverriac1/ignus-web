@@ -16,10 +16,13 @@ export class CatalogueComponent implements OnInit {
 
   }
 
+  searchProperty(term:string){
+    console.log(term);
+  }
+
   getProperties(){
     this._globalService.getModel('/api/property/catalogue')
      .then((result) => {
-      console.log(result['data']);
        this.properties=result['data'];
      },(err) => {
        console.log(err);

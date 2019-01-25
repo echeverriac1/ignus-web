@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit ,TemplateRef} from '@angular/core';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { GlobalService } from '../../providers/global.service';
 
 @Component({
@@ -9,12 +9,19 @@ import { GlobalService } from '../../providers/global.service';
 })
 
 export class ServicesComponent implements OnInit{
+  modalRef: BsModalRef;
+
   typeServices: any;
+  requeriments:any;
   show: boolean;
 
-  constructor(public _globalService: GlobalService) {
+  constructor(public _globalService: GlobalService,private modalService: BsModalService) {
     this.typeServices=[];
-    
+    this.requeriments=[];
+  }
+
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
   }
   
   sliderShow(){
@@ -27,9 +34,8 @@ export class ServicesComponent implements OnInit{
     }
   }
 
-  ngOnInit() {
-    this.sliderShow();
-    
+  getTypeServices(){
+
     this._globalService.getModel('/api/typeService')
      .then((result) => {
       //  console.log(result['data']);
@@ -38,6 +44,11 @@ export class ServicesComponent implements OnInit{
      },(err) => {
        console.log(err);
      });
+  }
+
+  ngOnInit() {
+    this.sliderShow();
+    this.getTypeServices()
 
   }
 

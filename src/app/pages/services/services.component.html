@@ -8,12 +8,30 @@
                      <p style="color:#414444">{{ typeService.description }}</p>
                      <div class="d-flex justify-content-between ">
                         <div>
-                           <button (click)="open()" type="button"  class="btn btn-primary full-width">Más información</button>
+                           <button (click)="openModal(template)" type="button"  class="btn btn-primary full-width">Más información</button>
                         </div>
                      </div>
                   </div>
                </div>
-               <br><br></div>
+               <br><br>
+         
+               <ng-template #template>
+                     <div class="modal-header">
+                       <h4 class="modal-title pull-left">{{ typeService.name  | uppercase }}</h4>
+                       <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                         <span aria-hidden="true">&times;</span>
+                       </button><br>
+                     </div>
+                     <div class="modal-body">
+                        <div *ngFor="let requeriment of typeService.requirements">
+                           <ul>
+                              <li>{{ requeriment.name }}</li>
+                           </ul>
+                        </div><hr>
+                     </div>
+                   </ng-template>
+
+         </div>
     </div>
 </div>
 

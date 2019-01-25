@@ -23,10 +23,12 @@
                   type="button" class="btn btn-xs btn-outline btn-primary ">
                       Detalle
                   </button>
-                  <button routerLink="/propiedad/{{ property.id }}" style="margin-right: 2px"
-                  type="button" class="btn btn-xs btn-outline btn-primary ">
-                      Solicitar
-                  </button>
+                    <a href="https://localhost:4200/login?propertyId={{property.id}}" target="_blank">
+                        <button  style="margin-right: 2px"
+                        type="button" class="btn btn-xs btn-outline btn-primary ">
+                            Solicitar
+                        </button>
+                    </a> 
               </div>
           </div>
       </div>

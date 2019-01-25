@@ -9,10 +9,14 @@ import { GlobalService } from '../../providers/global.service';
 export class FiltersComponent implements OnInit {
   typeServices: any;
   typeProperties: any;
+  states: any;
+  cities:any;
 
   constructor(public _globalService:GlobalService) { 
     this.typeServices=[];
     this.typeProperties=[];
+    this.states=[];
+    this.cities=[];
   }
 
   getTypeServices(){
@@ -33,10 +37,32 @@ export class FiltersComponent implements OnInit {
      });
   }
 
+  getState(){
+    this._globalService.getModel('/api/state')
+     .then((result) => {
+       this.states=result['data'];
+     },(err) => {
+       console.log(err);
+     });
+  }
+
+  getCity(){
+    console.log("getcity" ,this.states)
+     this.states.forEach(element => {
+      this._globalService.getModel_Id(element,'/state/city')
+      .then(data => {
+        this.cities.push(data['data']);
+      console.log(" estas son las ciudades ciudades" ,this.cities)
+      });
+     }); 
+    }
+
 
   ngOnInit() {
     this.getTypeServices();
     this.getTypeOfProperty();
+    this.getState();
+    this.getCity();
   }
 
 }

@@ -16,8 +16,6 @@ export class ListPromotionsComponent implements OnInit {
     this._globalService.getModel('/api/promotion?status=A')
     .then((result) => {
       this.promotions=result['data'];
-      console.log(' hola ')
-      console.log(this.promotions)
     },(err) => {
       console.log(err);
     });

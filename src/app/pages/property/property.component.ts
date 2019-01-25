@@ -49,6 +49,7 @@ export class PropertyComponent implements OnInit {
        this.state =this.aux.state;
        this.municipality =this.aux.municipality;
        this.parish =this.aux.parish;
+       console.log(this.aux)
      },(err) => {
        console.log(err);
      });

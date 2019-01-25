@@ -17,11 +17,6 @@ export class PropertiesComponent implements OnInit {
     this.propertySelected = new EventEmitter();
   }
 
-  showProperty() {
-
-    //this.router.navigate( ['/propiedad', this.index] );
-    //this.propertySelected.emit( this.index );
-  }
 
   ngOnInit() {
   }

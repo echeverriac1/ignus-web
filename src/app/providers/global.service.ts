@@ -64,16 +64,6 @@ export class GlobalService {
     })
   }
 
-  // addModel(model,tipo: String,httpOptions=httpOptionsDefault){
-  //   return new Promise(resolve =>{
-  //     this.http.post(this.apiBaseUrl + "" + tipo,model,httpOptions).subscribe((data:any) =>{
-  //       resolve(data);
-  //     }, (err:any) =>{
-  //       console.log(err);
-  //     })
-  //   })
-  // }
-
   updateModel(id, model, tipo: String,httpOptions=httpOptionsDefault){
     return new Promise(resolve =>{
       this.http.put(this.apiBaseUrl + "" + tipo  + '/' + id, model,httpOptions).subscribe(data =>{
