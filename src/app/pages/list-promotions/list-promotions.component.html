@@ -1,1 +1,13 @@
-<p> GUAIDO PRESIDENTE</p>
+<br><br>
+<div class="container list-promotion">
+  <div class="row">
+    <p style="margin-left:15px; font-size:20px; color: rgb(112, 112, 112)">PROMOCIONES:</p>
+  </div>
+  <div class="row">
+      <div class="col-xs-6 col-md-2 promotion"  *ngFor="let promotion of promotions">
+          <a href="/promociones/{{ promotion.id }}" class="thumbnail">
+            <img [src]="promotion.urlImage" [alt]="promotion.name" class="promotion">
+          </a>
+        </div>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalService } from '../../providers/global.service';
 
 @Component({
   selector: 'app-list-promotions',
@@ -6,11 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-promotions.component.css']
 })
 export class ListPromotionsComponent implements OnInit {
+  promotions:any;
+  constructor(public _globalService: GlobalService) { 
+    this.promotions=[];
+  }
 
-  constructor() { }
-
+  getPromotions(){
+    this._globalService.getModel('/api/promotion?status=A')
+    .then((result) => {
+      this.promotions=result['data'];
+      console.log(' hola ')
+      console.log(this.promotions)
+    },(err) => {
+      console.log(err);
+    });
+  }
   ngOnInit() {
-     
+     this.getPromotions()
   }
   
 
