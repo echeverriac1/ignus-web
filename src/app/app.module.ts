@@ -30,6 +30,8 @@ import { FiltersComponent } from './shared/filters/filters.component';
 import { SpecificationsComponent } from './pages/property/specifications/specifications.component';
 import { MapComponent } from './shared/map/map.component';
 import { ListPromotionsComponent } from './pages/list-promotions/list-promotions.component';
+import { PromotionsComponent } from './pages/promotions/promotions.component';
+import { PromotionDetailsComponent } from './pages/promotion-details/promotion-details.component';
 
 
 @NgModule({
@@ -51,7 +53,9 @@ import { ListPromotionsComponent } from './pages/list-promotions/list-promotions
     FiltersComponent,
     SpecificationsComponent,
     MapComponent,
-    ListPromotionsComponent
+    ListPromotionsComponent,
+    PromotionsComponent,
+    PromotionDetailsComponent
   ],
   imports: [
     BrowserModule,
